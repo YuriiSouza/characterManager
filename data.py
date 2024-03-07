@@ -1,16 +1,43 @@
 def allCharacters():
-    dataAllCharacter = []
     
     try:
-        with open("dataCharacter.json", "r") as file:
-            dataAllCharacter = file.read()
+        with open("dataCharacter.txt", "r") as file:
+            lines = file.readlines()
+
+        characters = []
+        character = {}
+
+        for line in lines:
+            line = line.strip()
             
-        return dataAllCharacter
+            
+            fields = line.split(",")
+            
+            n = 0
+            
+            for field in fields:
+                term = field.split(":")
+                
+                if n == 0:
+                    character["name"] = term[1]
+                elif n == 1:
+                    character["description"] = term[1]
+                elif n == 2:
+                    character["link"] = term[1]
+                elif n == 3:
+                    character["show"] = term[1]
+                elif n == 4:
+                    character["animator"] = term[1]
+        
+                n = n + 1
+                    
+            characters.append(character)
+            
+        return characters
+    
     except:
         print("Não existem dados.")
-        return dataAllCharacter
-        
-        
+        return []
 
 
 def saveCharacter(name, description, link, show, animator):
@@ -22,7 +49,6 @@ def saveCharacter(name, description, link, show, animator):
         "animator": str(animator)
     }
     
-    with open("dataCharacter.json", "a") as file:
-        file.write(character)
-        # file.write('{' + f'"name": "{name}","description":"{description}","link": "{link}","show": "{show}","animator":"{animator}"' + '},')
+    with open("dataCharacter.txt", "a") as file:
+        file.write('{' + f'"name": "{name}","description":"{description}","link": "{link}","show": "{show}","animator":"{animator}"' + '}\n')
         

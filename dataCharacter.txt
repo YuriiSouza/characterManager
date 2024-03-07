@@ -1,1 +1,2 @@
-{"name": "ben 10","description":"A historia comecou","link": "teste","show": "ben ","animator":"joa"},{"name": "arro","description":"sfsd","link": "sdgasdgdgsagsdfgasgasgaergas","show": "sdf","animator":""},
+{"name": "Ben 10","description":"A historia começou com um relogio esquisito","link": "https://static.wikia.nocookie.net/liga-da-zueira-oficial/images/2/2e/Ben_10_Original_Series_Render.png/revision/latest?cb=20201229010016&path-prefix=pt-br","show": "ben 10","animator":"joe"}
+{"name": "Gwen stacy","description":"Namorada do Morales","link": "https://upload.wikimedia.org/wikipedia/pt/5/52/Mulher-Aranha_%28Gwen_Stacy%29_em_Aranhaverso_2.png","show": "aranhaverso","animator":""}

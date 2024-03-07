@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 from character import *
 from data import *
 
@@ -8,10 +7,14 @@ from data import *
 #formatar output melhor futuramente
 def showCharacters():
     data = allCharacters()
-    
     for character in data:
-        print(character)
-        print("\n")
+        print("Name:", character["name"])
+        print("Description:", character["description"])
+        print("Link:", character["link"])
+        print("Show:", character["show"])
+        print("Animator:", character["animator"])
+        print("-" * 30)
+        
     
 
 
@@ -67,10 +70,8 @@ def main():
         elif action == 2:
             character = Character()
             
-            while True:
-                status = character.save()
-                if status:
-                    break
+            character.save()
+            
         else:
             break
             
