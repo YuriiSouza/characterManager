@@ -1,10 +1,6 @@
-#!/usr/bin/env python3
+from services.character import *
+from services.data import *
 
-from character import *
-from data import *
-
-
-#formatar output melhor futuramente
 def showCharacters():
     data = allCharacters()
     for character in data:
@@ -15,7 +11,8 @@ def showCharacters():
         print("Animator:", character["animator"])
         print("-" * 30)
         
-    
+        
+    return data
 
 
 def main():
@@ -64,11 +61,38 @@ def main():
             else:
                 print("Erro, opção inserida não suportada.")
         
+            
+            if action == 1:
+                showCharacters()
+            elif action == 2:
+                try:
+                    name = str(input("Nome do personagem:"))
+                except:
+                    print("Erro, nome não pode ser vazio.")
+                    
+                try:
+                    description = str(input("Descrição: "))
+                except:
+                    description = 'Sem descrição'
+                    
+                try:
+                    link = str(input("Link da imagem: "))
+                except:
+                    print("link não pode estar vazio.")
+                    
+                try:
+                    show = str(input("Programa que o personagem aparece: "))
+                except:
+                    print("Programa não pode estar vazio.")
+                    
+                try:
+                    animator = str(input("Nome do animador: "))
+                    if animator == '':
+                        animator = 'desconhecido'
+                except:
+                    animator = "desconhecido"
         
-        if action == 1:
-            showCharacters()
-        elif action == 2:
-            character = Character()
+            character = Character(name, description, link, show, animator)
             
             character.save()
             
