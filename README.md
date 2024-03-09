@@ -59,7 +59,7 @@ http://localhost:5000
 A documentação Swagger da API está disponível em:
 
 ```
-http://localhost:5000/swagger
+http://localhost:5000
 ```
 
 Agora você está pronto para começar a usar a API!
