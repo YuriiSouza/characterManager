@@ -33,10 +33,10 @@ source .venv/bin/activate
 Em seguida, você precisa instalar as dependências necessárias para a API. Execute os seguintes comandos:
 
 ```bash
-pip install python-dotenv
-pip install Watchdog
-pip install Flask
+pip install -r requirements.txt
 ```
+
+O arquivo `requirements.txt` contém todas as dependências necessárias, juntamente com suas versões específicas, se aplicável.
 
 ## Iniciar a API
 
