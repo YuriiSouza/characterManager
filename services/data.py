@@ -1,5 +1,4 @@
 def allCharacters():
-    
     try:
         with open("dataCharacter.txt", "r") as file:
             lines = file.readlines()

@@ -7,7 +7,7 @@ class Character():
         self.link = link
         self.show = show
         self.animator = animator
-        
+
 
     def save(self):
         try: 
