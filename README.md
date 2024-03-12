@@ -43,7 +43,7 @@ O arquivo `requirements.txt` contém todas as dependências necessárias, juntam
 Agora que o ambiente está configurado e as dependências estão instaladas, você pode iniciar a API. Use o seguinte comando:
 
 ```bash
-flask --app api run
+python app/main.py
 ```
 
 ## Acesso à API
