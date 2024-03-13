@@ -9,7 +9,7 @@ Este é um guia passo a passo para configurar e usar a API que foi criada.
 Para começar, você precisa configurar um ambiente virtual usando o `venv` do Python:
 
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 ```
 
 ### 2. Ativar o Ambiente Virtual
@@ -26,6 +26,11 @@ source .venv/bin/activate
 
 ```bash
 .venv\Scripts\activate
+```
+
+Se caso ocorrer erro de permicao de scripts, rode o comando
+```bash
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 ```
 
 ### 3. Instalar o PostgreSQL
