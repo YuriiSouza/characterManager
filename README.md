@@ -28,6 +28,18 @@ source .venv/bin/activate
 .venv\Scripts\activate
 ```
 
+### 3. Instalar o PostgreSQL
+
+Certifique-se de ter o PostgreSQL instalado em seu sistema. Você pode baixá-lo em [postgresql.org](https://www.postgresql.org/download/).
+
+### 4. Configurar o Arquivo .env
+
+Copie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente com as informações de configuração do seu banco de dados PostgreSQL.
+
+```bash
+cp .env.example .env
+```
+
 ## Instalação de Dependências
 
 Em seguida, você precisa instalar as dependências necessárias para a API. Execute os seguintes comandos:
