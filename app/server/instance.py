@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restx import Api, Resource
 from services.database import *
+from services.manager import *
 
 class Server(object):
     def __init__(self):

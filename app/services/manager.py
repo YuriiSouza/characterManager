@@ -12,8 +12,8 @@ PASSWORD = os.getenv('PASSWORD')
 db = PostgresqlDatabase('managercharacters', host=HOST, user=USER, password=PASSWORD, port=5432)
 
 class Characters(Model):
-    id = UUIDField(primary_key=True, default=uuid.uuid4)
-    name = CharField()
+    id = UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
+    name = CharField(unique=True)
     description = CharField()
     link = CharField()
     show = CharField()
@@ -25,3 +25,5 @@ class Characters(Model):
 
 db.connect()
 db.create_tables([Characters])
+        
+
